@@ -1,0 +1,10 @@
+{
+    name: "nu-pager-help"
+    version: 1.0.0
+    description: "A replacement for the builtin help command of Nushell, with paging for large help pages."
+    documentation: "https://github.com/amtoine/nu-pager-help/blob/main/README.md"
+    maintainers: [ @amtoine ]
+    license: "https://github.com/amtoine/nu-pager-help/blob/main/LICENSE"
+    dependencies: { nushell: 0.96.0 }
+    type: "module"
+}
