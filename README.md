@@ -11,3 +11,6 @@ This module then exports one alias and one command
 - `help`: a thin wrapper around the builtin `help` command which
   - adds completion for the command name
   - uses a pager if the help page is too large for the current terminal height
+
+## Installation
+The recommended way is to use [Nupm](https://github.com/nushell/nupm).
