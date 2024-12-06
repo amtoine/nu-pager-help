@@ -31,7 +31,12 @@ export alias "core help" = help
 export def help [
     ...cmd: string@complete-commands # the command that needs some help
     --pager: closure # the pager (defaults to less)
-] {
+    --find (-f): string # a pattern to search for in the help pages
+]: [ nothing -> table ] {
+    if $find != null {
+        return (core help --find $find)
+    }
+
     let h = if ($cmd | is-empty) {
         core help
     } else {
@@ -61,4 +66,6 @@ export def help [
         let pager = $pager | default { less -r }
         $h | do $pager
     }
+
+    return
 }
