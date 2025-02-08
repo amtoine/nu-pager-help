@@ -41,7 +41,7 @@ export def help [
         core help
     } else {
         let command = $cmd | str join ' '
-        if $command not-in (help commands | get name) {
+        if $command not-in (scope commands | get name) {
             error make {
                 msg: $"(ansi red_bold)invalid_command(ansi reset)",
                 label: {
